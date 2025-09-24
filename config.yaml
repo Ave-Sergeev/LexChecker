@@ -1,0 +1,7 @@
+# AppSettings
+app:
+  words_path: "./assets/words.txt"
+  dictionary_path: "./assets/minilex.txt"
+# LogSettings
+logging:
+  log_level: "INFO"

@@ -10,14 +10,14 @@ pub struct LogSettings {
 }
 
 #[derive(Debug, Deserialize, Serialize, Default)]
-pub struct AppSettings {
+pub struct VocabSettings {
     pub words_path: String,
     pub dictionary_path: String,
 }
 
 #[derive(Debug, Deserialize, Serialize, Default)]
 pub struct Settings {
-    pub app: AppSettings,
+    pub vocab: VocabSettings,
     pub logging: LogSettings,
 }
 

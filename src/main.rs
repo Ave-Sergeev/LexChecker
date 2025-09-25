@@ -1,31 +1,35 @@
-use std::error::Error;
 use crate::lexicon::dictionary::Dictionary;
-use inquire::Select;
-use rand::seq::{IndexedRandom, SliceRandom};
-use std::path::Path;
-use std::str::FromStr;
-use env_logger::Builder;
-use log::LevelFilter;
 use crate::lexicon::words::WordsPool;
 use crate::setting::settings::Settings;
+use env_logger::Builder;
+use inquire::Select;
+use log::LevelFilter;
+use rand::seq::{IndexedRandom, SliceRandom};
+use std::error::Error;
+use std::path::Path;
+use std::str::FromStr;
 
 mod lexicon;
 mod setting;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let mut rng = rand::rng();
     let mut correct: usize = 0;
+    let amount_elements = 3;
+    let mut rng = rand::rng();
 
-    let settings = Settings::new("config.yaml", "APP").map_err(|err| format!("Failed to load setting: {err}"))?;
+    let settings = Settings::new("config.yaml", "APP")
+        .map_err(|err| format!("Failed to load setting: {err}"))?;
 
     Builder::new()
-        .filter_level(LevelFilter::from_str(settings.logging.log_level.as_str()).unwrap_or(LevelFilter::Info))
+        .filter_level(
+            LevelFilter::from_str(settings.logging.log_level.as_str()).unwrap_or(LevelFilter::Info),
+        )
         .init();
 
     log::info!("Settings:\n{}", settings.json_pretty());
 
-    let words_path = Path::new(&settings.app.words_path);
-    let dictionary_path = Path::new(&settings.app.dictionary_path);
+    let words_path = Path::new(&settings.vocab.words_path);
+    let dictionary_path = Path::new(&settings.vocab.dictionary_path);
 
     let words_pool = WordsPool::new(words_path);
     let dictionary = Dictionary::new(dictionary_path);
@@ -35,7 +39,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     pairs.shuffle(&mut rng);
 
     if pairs.is_empty() || words.is_empty() {
-        log::error!("File lexicon.txt or words.txt is empty");
+        log::error!("File is empty");
         return Ok(());
     }
 
@@ -43,7 +47,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         let word = pair.get_word();
         let translate = pair.get_translate();
 
-        let choices = make_choices(&translate, &words, &mut rng);
+        let choices = make_choices(&translate, &words, &mut rng, amount_elements);
         let answer = Select::new(
             &format!("{}. Перевод слова \"{}\" ->", idx + 1, word),
             choices.clone(),
@@ -64,9 +68,14 @@ fn main() -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-fn make_choices<'a>(right: &'a str, pool: &'a [String], rng: &mut impl rand::Rng) -> Vec<&'a str> {
+fn make_choices<'a>(
+    right: &'a str,
+    pool: &'a [String],
+    rng: &mut impl rand::Rng,
+    amount_elements: usize,
+) -> Vec<&'a str> {
     let mut choices: Vec<&str> = pool
-        .choose_multiple(rng, 3)
+        .choose_multiple(rng, amount_elements)
         .map(String::as_str)
         .collect();
 

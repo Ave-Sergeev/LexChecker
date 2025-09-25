@@ -1,5 +1,5 @@
 # AppSettings
-app:
+vocab:
   words_path: "./assets/words.txt"
   dictionary_path: "./assets/minilex.txt"
 # LogSettings

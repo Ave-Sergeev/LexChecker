@@ -1,10 +1,9 @@
 Entered:Вошёл
 Her:Её
 Kitchen:Кухня
-Little:Маленькая
+Little:Маленький
 Hurriedly:Поспешно
 This:Эта
-June:Июнь
 Morning:Утро
 Did:Делал
 Usually:Обычно
@@ -34,7 +33,7 @@ Only:Только
 Months:Месяцы
 Already:Уже
 Knew:Знал
-That:Что
+That:То
 Mistress:Хозяйка
 Answered:Ответил
 Cheerfully:Весело
@@ -44,7 +43,7 @@ Wiping:Вытирать
 Voice:Голос
 Very:Очень
 Stern:Строгий
-Talking:Говорю
+Talking:Говорящий
 To:К
 Wish:Желание
 Your:Твоей
@@ -162,7 +161,7 @@ Put:Положить
 Things:Вещи
 Take:Брать
 Front:Перед
-Hesitated:Колебался
+Hesitated:Колеблющийся
 Then:Затем
 Went:Пошёл
 Suppose:Полагать
@@ -226,7 +225,7 @@ Because:Потому что
 Happened:Случилось
 Silly:Глупый
 Enough:Достаточно
-Bring:Принести
+Bring:Приносить
 Unnecessary:Ненужный
 World:Мир
 Quite:Довольно
@@ -286,7 +285,6 @@ Terms:Условия
 Sake:Ради
 Among:Среди
 People:Люди
-East:Восток
 Hence:Следовательно
 Writing:Письмо
 Ready:Готовый
@@ -374,7 +372,7 @@ Stood:Стоял
 Occupants:Жители
 Hill:Холм
 Looking:Смотрящий
-Reaching:Достигающий
+Reaching:Достижение
 Valley:Долина
 Below:Ниже
 Changes:Изменения

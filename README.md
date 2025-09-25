@@ -20,11 +20,20 @@ UPD: The project is not finished, improvements will be added as soon as possible
 
 The following fields are set in `config.yaml`:
 
-- `App`
+- `Vocab`
   - `words_path` - path to the file with random words (for responses).
   - `dictionary_path` - path to the file with the `word:translation` dictionary.
 - `Logging`
   - `log_level` - log/tracing verbosity level.
+
+***Attention!***
+You can set the configuration using environment variables without using the `config.yaml` file.  
+To do this, set the necessary environment variables in the operating system and set the corresponding values.
+
+Example:
+- `APP__LOGGING__LOG_LEVEL=INFO`
+- `APP__VOCAB__WORDS_PATH=path/to/words.txt`
+- `APP__VOCAB__DICTIONARY_PATH=path/to/dictionary.txt`
 
 ### Local startup
 
@@ -42,7 +51,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo --version
 ```
 
-3) We clone the project from GitHub, open it, and execute the following commands.
+3) We clone the project from `GitHub`, open it, and execute the following commands.
 
 Check the code to see if it can be compiled (without running it).
 ```shell

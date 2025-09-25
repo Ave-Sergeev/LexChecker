@@ -41,7 +41,6 @@ Perhaps:Возможно
 Possible:Возможный
 Question:Вопрос
 Damage:Урон
-Time:Время
 Everybody:Все
 Everything:Все
 Always:Всегда
@@ -292,7 +291,7 @@ Why:Почему
 Almost:Почти
 Right:Верно
 Right:Правый
-Suggest:Предложить
+Suggest:Предлагать
 Beautiful:Прекрасный
 Arrive:Прибыть
 Bring:Приносить
@@ -313,7 +312,7 @@ Journey:Путешествие
 Travel:Путешествовать
 Work:Работать
 Glad:Рад
-Time:Раз
+Time:Время
 Different:Различный
 Early:Рано
 Child:Ребёнок

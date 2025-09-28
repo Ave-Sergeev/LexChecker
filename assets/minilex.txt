@@ -97,7 +97,7 @@ If:Если
 Eat:Кушать
 To go:Ехать
 Still:Еще
-Hot:Жаркий
+Hot:Горячий/Жаркий
 Wait:Ждать
 Wife:Жена
 Married:Женат
@@ -119,13 +119,13 @@ And:И
 Play:Играть
 Go:Идти
 Walk:Идти
-From:Из
+From:Из/От
 Famous:Известный
 Because:Потому что
 Change:Изменить
 Learn:Учиться
 Or:Или
-Have:Иметь
+Have:Иметь/Обладать
 Name:Имя
 Otherwise:Иначе
 Sometimes:Иногда
@@ -225,7 +225,7 @@ Leg:Нога
 Night:Ночь
 Like:Нравиться
 Need:Нуждаться
-About:О
+About:О/Около
 Both:Оба
 Worried:Беспокоиться
 Promise:Обещать
@@ -247,7 +247,6 @@ Leave:Оставить
 Leaf:Листья
 Stop:Останавливаться
 Stay:Оставаться
-From:От
 Answer:Ответ
 Father:Отец
 Open:Открыть
@@ -413,8 +412,7 @@ Price:Цена
 Hour:Час
 Often:Часто
 Part:Часть
-Watch:Часы
-Watch:Наблюдать
+Watch:Часы/Наблюдать
 Person:Человек
 Than:Чем
 Suitcase:Чемодан

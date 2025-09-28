@@ -42,7 +42,7 @@ Continued:Продолжение
 Wiping:Вытирать
 Voice:Голос
 Very:Очень
-Stern:Строгий
+Stern:Суровый
 Talking:Говорящий
 To:К
 Wish:Желание

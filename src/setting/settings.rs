@@ -1,7 +1,6 @@
 use anyhow::Result;
 use config::{Config, Environment};
 use serde::{Deserialize, Serialize};
-use serde_json::to_string_pretty;
 use std::path::Path;
 
 #[derive(Debug, Deserialize, Serialize, Default)]
@@ -40,9 +39,5 @@ impl Settings {
         let settings = builder.build()?.try_deserialize()?;
 
         Ok(settings)
-    }
-
-    pub fn json_pretty(&self) -> String {
-        to_string_pretty(&self).expect("Failed serialize")
     }
 }

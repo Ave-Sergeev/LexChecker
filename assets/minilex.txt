@@ -113,7 +113,7 @@ Sound:Звук
 Here:Здесь
 Earth:Земля
 Know:Знать
-So:Значит
+So:Так
 Mean:Значить
 And:И
 Play:Играть
@@ -407,7 +407,7 @@ Although:Хотя
 Keep:Держать/Сохранять
 Worse:Худший
 Color:Цвет
-Whole:Целый
+Whole:Весь
 Price:Цена
 Hour:Час
 Often:Часто

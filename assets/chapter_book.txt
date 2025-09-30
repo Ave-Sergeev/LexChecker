@@ -7,6 +7,7 @@ This:Эта
 Morning:Утро
 Did:Делал
 Usually:Обычно
+Spend:Тратить
 Make:Делать
 Hurried:Поспешил
 Movements:Движения
@@ -19,7 +20,7 @@ Repose:Спокойствие
 Manner:Манера
 But:Но
 To day:Сегодня
-Was:Была
+Was:Был
 Hurrying:Спешка
 Washing:Стирка
 Dishes:Посуда
@@ -59,7 +60,8 @@ Down:Вниз
 Once:Один раз
 With:С
 Cloth:Тряпка
-About:Около
+About:О/Около
+About to:Вот-вот
 It:Это
 Thereby:Тем самым
 Nearly:Около

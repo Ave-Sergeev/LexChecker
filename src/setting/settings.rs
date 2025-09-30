@@ -9,6 +9,11 @@ pub struct LogSettings {
 }
 
 #[derive(Debug, Deserialize, Serialize, Default)]
+pub struct TestSettings {
+    pub amount_incorrect_answer: usize,
+}
+
+#[derive(Debug, Deserialize, Serialize, Default)]
 pub struct VocabSettings {
     pub words_path: String,
     pub dictionary_path: String,
@@ -16,6 +21,7 @@ pub struct VocabSettings {
 
 #[derive(Debug, Deserialize, Serialize, Default)]
 pub struct Settings {
+    pub test: TestSettings,
     pub vocab: VocabSettings,
     pub logging: LogSettings,
 }

@@ -19,6 +19,8 @@ UPD: The project is not finished, improvements will be added as soon as possible
 
 The following fields are set in `config.yaml`:
 
+- `Test`
+  - `amount_incorrect_answer` - the number of incorrect answers.
 - `Vocab`
   - `words_path` - path to the file with a pool of random words (used for answers).
   - `dictionary_path` - path to the file with the `word:translation` dictionary.
@@ -31,8 +33,10 @@ To do this, set the necessary environment variables in the operating system and 
 
 Example:
 - `APP__LOGGING__LOG_LEVEL=INFO`
+- `APP__TEST__AMOUNT_INCORRECT_ANSWE=3`
 - `APP__VOCAB__WORDS_PATH=path/to/words.txt`
 - `APP__VOCAB__DICTIONARY_PATH=path/to/dictionary.txt`
+
 
 ### Local startup
 

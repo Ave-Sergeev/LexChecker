@@ -1,4 +1,7 @@
-# AppSettings
+# TestSettings
+test:
+  amount_incorrect_answer: 3
+# VocabSettings
 vocab:
   words_path: "./assets/words.txt"
   dictionary_path: "./assets/minilex.txt"

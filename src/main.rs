@@ -1,6 +1,7 @@
 use crate::lexicon::dictionary::Dictionary;
 use crate::lexicon::vocab_pair::VocabPair;
 use crate::lexicon::words::WordsPool;
+use crate::mode::test_mode::TestMode;
 use crate::setting::settings::Settings;
 use env_logger::Builder;
 use inquire::{Confirm, Select};
@@ -12,10 +13,12 @@ use std::path::Path;
 use std::str::FromStr;
 
 mod lexicon;
+mod mode;
 mod setting;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let amount_elements = 3;
+    let min_words_required: usize = 3;
+
     let mut rng = rand::rng();
 
     let settings = Settings::new("config.yaml", "APP")
@@ -27,6 +30,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         )
         .init();
 
+    let amount_incorrect_answer = settings.test.amount_incorrect_answer;
+
     let words_path = Path::new(&settings.vocab.words_path);
     let dictionary_path = Path::new(&settings.vocab.dictionary_path);
 
@@ -35,35 +40,52 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let words = words_pool.get_words().unwrap();
     let mut pairs = dictionary.get_pairs();
-    pairs.shuffle(&mut rng);
 
-    if pairs.is_empty() || words.is_empty() {
-        log::error!("File is empty");
-        return Ok(());
+    if pairs.is_empty() {
+        return Err("Dictionary file is empty".into());
+    }
+
+    if words.len() < min_words_required {
+        return Err(format!(
+            "Not enough words in the [random word pool] file. Required: {}, available: {}",
+            min_words_required,
+            words.len()
+        )
+        .into());
     }
 
     loop {
-        let correct_answer = run_quiz(&mut pairs, &words, &mut rng, amount_elements);
+        pairs.shuffle(&mut rng);
 
-        println!("Результат: {}/{} слов.\n", correct_answer, pairs.len());
+        let total_questions = choose_test_size(pairs.len());
+        println!();
 
-        if ask_restart() {
-            pairs.shuffle(&mut rng);
-            println!();
-            continue;
-        } else {
+        let quiz_pairs = pairs
+            .iter()
+            .take(total_questions)
+            .cloned()
+            .collect::<Vec<_>>();
+        let correct_answers = run_quiz(&quiz_pairs, &words, &mut rng, amount_incorrect_answer);
+
+        println!(
+            "\nРезультат: {correct_answers}/{total_questions} слов (≈{}%)\n",
+            (correct_answers * 100) / total_questions
+        );
+
+        if !ask_restart() {
             break;
         }
+        println!();
     }
 
     Ok(())
 }
 
 fn run_quiz(
-    pairs: &mut Vec<VocabPair>,
-    words: &Vec<String>,
+    pairs: &[VocabPair],
+    words: &[String],
     rng: &mut impl Rng,
-    amount_elements: usize,
+    amount_incorrect_answer: usize,
 ) -> usize {
     let mut correct: usize = 0;
 
@@ -71,7 +93,7 @@ fn run_quiz(
         let word = pair.get_word();
         let translate = pair.get_translate();
 
-        let choices = make_choices(&translate, &words, rng, amount_elements);
+        let choices = make_choices(&translate, words, rng, amount_incorrect_answer);
         let answer = Select::new(
             &format!("{}. Перевод слова \"{}\" ->", idx + 1, word),
             choices.clone(),
@@ -91,27 +113,41 @@ fn run_quiz(
 }
 
 fn ask_restart() -> bool {
-    match Confirm::new("Пройти тест заново?")
-        .with_default(false)
-        .prompt()
-    {
-        Ok(true) => true,
-        _ => false,
-    }
+    matches!(
+        Confirm::new("Пройти тест заново?")
+            .with_default(false)
+            .prompt(),
+        Ok(true)
+    )
 }
 
 fn make_choices<'a>(
     right: &'a str,
     pool: &'a [String],
-    rng: &mut impl rand::Rng,
-    amount_elements: usize,
+    rng: &mut impl Rng,
+    amount_incorrect_answer: usize,
 ) -> Vec<&'a str> {
     let mut choices: Vec<&str> = pool
-        .choose_multiple(rng, amount_elements)
+        .choose_multiple(rng, amount_incorrect_answer)
         .map(String::as_str)
         .collect();
 
     choices.push(right);
     choices.shuffle(rng);
     choices
+}
+
+fn choose_test_size(pairs_len: usize) -> usize {
+    let options = vec![
+        TestMode::Express(10),
+        TestMode::Express(30),
+        TestMode::Express(50),
+        TestMode::Full,
+    ];
+
+    let selection = Select::new("Выберите режим теста:", options)
+        .prompt()
+        .unwrap_or(TestMode::Full);
+
+    selection.size(pairs_len)
 }

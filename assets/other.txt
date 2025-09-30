@@ -1,0 +1,4 @@
+Admit:Признавать
+Guilty:Виновный
+Innocent:Невинный
+Relief:Облегчение

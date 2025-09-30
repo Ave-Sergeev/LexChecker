@@ -13,7 +13,7 @@ Afraid:Испуганный
 Brother:Брат
 Paper:Бумага
 Would:Бы
-Quickly:Быстро
+Quick:Быстрый
 Fast:Быстрый
 To be:Быть
 Into:В
@@ -295,7 +295,7 @@ Beautiful:Прекрасный
 Arrive:Прибыть
 Bring:Приносить
 Used:Использовать
-Come:Прийти
+Come:Приходить
 Fetch:Принести
 Bring:Приносить
 Reason:Причина
@@ -383,7 +383,7 @@ Then:Тогда
 Only:Только
 Just:Только
 Same:Тот же
-That:Тот
+That:Тот/То/Что
 Exactly:Точно
 Difficult:Трудный
 Heavy:Тяжёлый
@@ -404,7 +404,7 @@ Good:Хороший
 Well:Хорошо
 Want:Хотеть
 Although:Хотя
-Keep:Держать
+Keep:Держать/Сохранять
 Worse:Худший
 Color:Цвет
 Whole:Целый
@@ -418,7 +418,6 @@ Than:Чем
 Suitcase:Чемодан
 Clean:Чистый
 Read:Читать
-That:Что
 What:Что
 Something:Что-нибудь
 Feel:Чувствовать

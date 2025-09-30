@@ -6,13 +6,12 @@
 
 ### Description
 
-This project was created at the request of my wife, who is learning English.  
-As part of her studies, she needed a tool to test her vocabulary.
+This mini-project was created at the request of my wife, who is learning English.  
+During her studies, she needed a tool to test her vocabulary.  
+The result was this interactive CLI application for vocabulary tests.  
 
-The project is an interactive `CLI` application for vocabulary tests.
-
-You can add your own dictionary `word:translation`, or use the default one.  
-In this case, it's `Minilex`, a set of the most common words (basic vocabulary according to Erik Gunnemark).
+You can add your own dictionary or use the default `Minilex`.  
+In this case - `Minilex` is a set of the most commonly used words (basic vocabulary according to Erik Gunnemark).
 
 UPD: The project is not finished, improvements will be added as soon as possible.
 
@@ -21,14 +20,14 @@ UPD: The project is not finished, improvements will be added as soon as possible
 The following fields are set in `config.yaml`:
 
 - `Vocab`
-  - `words_path` - path to the file with random words (for responses).
+  - `words_path` - path to the file with a pool of random words (used for answers).
   - `dictionary_path` - path to the file with the `word:translation` dictionary.
 - `Logging`
   - `log_level` - log/tracing verbosity level.
 
 ***Attention!***
-You can set the configuration using environment variables without using the `config.yaml` file.  
-To do this, set the necessary environment variables in the operating system and set the corresponding values.
+Configuration can be set via environment variables without using the `config.yaml` file.  
+To do this, set the necessary environment variables in the operating system and assign them the appropriate values.
 
 Example:
 - `APP__LOGGING__LOG_LEVEL=INFO`

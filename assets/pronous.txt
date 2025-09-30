@@ -1,0 +1,40 @@
+I:Я
+You:Ты/Вы
+He:Он
+She:Она
+It:Оно
+We:Мы
+They:Они
+Me:Мне/Меня
+Him:Его/Ему
+Her:Её/Ей
+Us:Нас/Нам
+Them:Их/Им
+My/Mine:Мой
+Your:Твой
+His:Его
+Her:Её
+Its:Его
+Our:Наш
+Their:Их
+This:Это
+These:Эти
+That:То
+Those:Те
+Who:Кто
+What:Что
+Which:Какой/Который
+Whose:Чей
+Whom:Кому/Кем
+No:Никакой
+Nothing:Ничего/Ничто
+Nobody:Никто
+No one:Никто
+None:Ни один из/Ничто
+Neither:Ни один/Никто
+Something:Кое-что/Нечто/Что-нибудь
+Somebody:Кто-нибудь/Кто-то
+Someone:Кто-нибудь/Кто-то
+Anything:Что-нибудь/Всё
+Anybody:Кто-нибудь/Всякий/Любой
+Anyone:Кто-нибудь/Любой

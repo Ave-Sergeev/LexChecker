@@ -49,7 +49,7 @@ Meet:Встретиться
 Yesterday:Вчера
 High:Высокий
 Tall:Высокий
-Upstairs:Выше
+Upstairs:Наверху
 Newspaper:Газета
 Where:Где
 Eye:Глаз
@@ -113,7 +113,6 @@ Sound:Звук
 Here:Здесь
 Earth:Земля
 Know:Знать
-So:Так
 Mean:Значить
 And:И
 Play:Играть
@@ -190,8 +189,7 @@ Husband:Муж
 Man:Мужчина
 Wash:Мыть
 On:На
-Up:Наверх
-Up:Наверху
+Up:Вверх
 Over:Над
 Hope:Надеяться
 Ago:Назад
@@ -241,7 +239,7 @@ Land:Земля
 Borrow:Занимать
 Own:Владеть
 Dangerous:Опасный
-Again:Опять
+Again:Снова
 Especially:Особенно
 Leave:Оставить
 Leaf:Листья
@@ -288,6 +286,7 @@ Then:Потом
 Ground:Почва
 Why:Почему
 Almost:Почти
+Most:Много
 Right:Верно
 Right:Правый
 Suggest:Предлагать
@@ -369,7 +368,7 @@ Glad:Радостный
 Son:Сын
 Surprise:Сюрприз
 So:Так
-As:Так как
+As:Kак
 Too:Тоже
 Also:Также
 Such:Такой

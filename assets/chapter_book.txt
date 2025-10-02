@@ -3,7 +3,7 @@ Her:Её
 Kitchen:Кухня
 Little:Маленький
 Hurriedly:Поспешно
-This:Эта
+This:Это
 Morning:Утро
 Did:Делал
 Usually:Обычно
@@ -14,14 +14,15 @@ Movements:Движения
 She:Она
 Specially:Специально
 Prided:Гордый
-Herself:Себя
+Himself:Сам
+Herself:Сама
 On:На
 Repose:Спокойствие
 Manner:Манера
 But:Но
 To day:Сегодня
 Was:Был
-Hurrying:Спешка
+Hurry:Торопиться
 Washing:Стирка
 Dishes:Посуда
 Sink:Раковина
@@ -34,7 +35,7 @@ Only:Только
 Months:Месяцы
 Already:Уже
 Knew:Знал
-That:То
+That:Тот/То/Что
 Mistress:Хозяйка
 Answered:Ответил
 Cheerfully:Весело
@@ -45,7 +46,7 @@ Voice:Голос
 Very:Очень
 Stern:Суровый
 Talking:Говорящий
-To:К
+To:К/В
 Wish:Желание
 Your:Твоей
 Work:Работа
@@ -69,7 +70,6 @@ Tipping:Поворотный
 Over which:Над которым
 Add:Добавить
 Composure:Самообладание
-Will:Воля
 Stammered:Заикаться
 Righting:Выпрямление
 Turning:Поворот
@@ -79,7 +79,6 @@ Told:Сказал
 Ye:Вы
 Know:Знать
 Frowned:Нахмуриться
-That:Что
 Do:Делать
 Ask:Просить
 For:Для
@@ -121,23 +120,31 @@ Place:Место
 Great:Великий
 House:Дом
 Come:Прийти
-From:Из
+Come on:Давай же
+Come in:Входите
+Come out:Выходите
+From:Из/От
 Corners:Углы
 Miles:Мили
 Away:Прочь
+Wipe:Вытирать
 As:Как
 Old:Старый
 Homestead:Усадьба
 Wealthiest:Богатейший
 Residents:Жители
 Town:Город
+Knew:Знал
 Now:Сейчас
 Severe:Серьезный
 Who:Кто
 Knife:Нож
 Clattered:Грохочущий
+Looked up:Поднял взгляд
+Bang:Хлопнуть
 Floor:Пол
 Or:Или
+Came:Пришёл
 Door:Дверь
 Thought:Мысль
 Smile:Улыбка
@@ -150,10 +157,10 @@ May:Может
 Room:Комната
 Stairs:Лестница
 Attic:Чердак
-Cot:Раскладушка
+Cot bed:Детская кровать
 Bed:Кровать
 Sweep:Подметать
-Course:Курс
+Of course:Конечно
 After:После
 Trunks:Сундуки
 Boxes:Коробки
@@ -163,9 +170,9 @@ Put:Положить
 Things:Вещи
 Take:Брать
 Front:Перед
-Hesitated:Колеблющийся
+Hesitated:Помедлил
 Then:Затем
-Went:Пошёл
+Went on:Продолжил
 Suppose:Полагать
 Well:Хорошо
 Tell:Сказать
@@ -179,6 +186,7 @@ Here:Здесь
 Won't:Не будет
 Be:Быть
 Nice:Хороший
+Surprise:Удивление/Сюрприз
 Cried:Плакал
 Thinking:Мышление
 Sunshine:Солнечный свет
@@ -205,7 +213,6 @@ Faltered:Запнулся
 Thank:Благодарить
 Lady:Леди
 Dryly:Сухо
-See:Видеть
 Immediate:Немедленный
 Need:Нуждаться
 Want:Хотеть
@@ -227,10 +234,11 @@ Because:Потому что
 Happened:Случилось
 Silly:Глупый
 Enough:Достаточно
+Bring up:Воспитать
 Bring:Приносить
 Unnecessary:Ненужный
 World:Мир
-Quite:Довольно
+Quite:Совершенно
 Full:Полный
 How:Как
 Particularly:Особенно
@@ -239,6 +247,7 @@ Them:Их
 Myself:Себя
 Said:Сказал
 See:Видеть
+Wear:Носить
 Sharply:Резко
 Sighed:Вздохнул
 Picking:Сбор
@@ -280,7 +289,8 @@ Salary:Зарплата
 Believe:Верить
 Deceased:Покойный
 Husband:Муж
-Gave:Отдал
+Give:Давать
+Gave:Дал
 Understand:Понимать
 Families:Семьи
 Terms:Условия
@@ -291,7 +301,7 @@ Hence:Следовательно
 Writing:Письмо
 Ready:Готовый
 Start:Начать
-By:К
+By:К/В
 Time:Время
 We:Мы
 Would:Бы
@@ -324,13 +334,13 @@ Disagreeable:Неприятный
 Task:Задача
 As:Как
 Sat:Сидел
-Thoughts:Мысли
 Back:Назад
 Insisted:Настаивал
 Upon:На
 Marrying:Женитьба
 Young:Молодой
-Minister:Министр
+Minister:Священник
+Wrote:Написал
 Spite:Злоба
 Remonstrances:Протесты
 There:Там
@@ -353,7 +363,6 @@ Married:Женатый
 Gone:Ушел
 Break:Перерыв
 Remembered:Вспомнил
-Though:Хотя
 Youngest:Самый молодой
 Sure:Уверен
 Written:Написано
@@ -367,7 +376,6 @@ Death:Смерть
 Short:Короткий
 Heart broken:Убитый горем
 Note:Записка
-Himself:Сам
 Dated:Датированный
 Meanwhile:Тем временем
 Stood:Стоял
@@ -385,7 +393,7 @@ Father:Отец
 Sisters:Сестры
 Dead:Мертвый
 Sole:Подошва
-Thousands:Тысячи
+Thousand:Тысяча
 Openly:Открыто
 Pitied:Жалел
 Life:Жизнь

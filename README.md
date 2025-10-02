@@ -23,11 +23,11 @@ The following fields are set in `config.yaml`:
   - `amount_incorrect_answer` - the number of incorrect answers.
 - `Vocab`
   - `words_path` - path to the file with a pool of random words (used for answers).
-  - `dictionary_path` - path to the file with the `word:translation` dictionary.
+  - `dictionary_path` - path to the dictionary file (in the format `word:translation`).
 - `Logging`
   - `log_level` - log/tracing verbosity level.
 
-***Attention!***
+***Attention!***  
 Configuration can be set via environment variables without using the `config.yaml` file.  
 To do this, set the necessary environment variables in the operating system and assign them the appropriate values.
 
@@ -37,6 +37,13 @@ Example:
 - `APP__VOCAB__WORDS_PATH=path/to/words.txt`
 - `APP__VOCAB__DICTIONARY_PATH=path/to/dictionary.txt`
 
+### Dictionary
+
+If you want to add your own dictionary, please follow the instructions:
+
+1) Create a file with the `.txt` extension (e.g. `my_dictionary.txt`).
+2) Fill it in. Each pair should be in the format `word:translation` and start on a new line.
+3) Add the completed file to the project, in the `./assets` directory. And specify the path to it in `config.yaml`.
 
 ### Local startup
 

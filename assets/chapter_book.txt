@@ -18,7 +18,7 @@ Himself:Сам
 Herself:Сама
 On:На
 Repose:Спокойствие
-Manner:Манера
+Manner:Манера/Образ действия
 But:Но
 To day:Сегодня
 Was:Был

@@ -30,3 +30,5 @@ break/broke/broken:Ломать
 speak/spoke/spoken:Говорить
 fall/fell/fallen:Падать
 win/won/won:Побеждать
+forget/forgot/forgotten:Забывать
+forgive/forgave/forgiven:Прощать

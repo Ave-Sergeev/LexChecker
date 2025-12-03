@@ -8,20 +8,14 @@ pub struct WordsPool {
 }
 
 impl WordsPool {
-    pub fn new(path: &Path) -> Self {
-        let words = Self::load_words(path).unwrap();
+    pub fn new(path: &Path) -> Result<Self, Error> {
+        let words = Self::load_words(path)?;
 
-        WordsPool { words }
+        Ok(WordsPool { words })
     }
 
-    pub fn get_words(&self) -> Option<Vec<String>> {
-        if self.words.is_empty() {
-            return None;
-        }
-
-        let sampled_words = self.words.clone();
-
-        Some(sampled_words)
+    pub fn get_words(&self) -> &[String] {
+        &self.words
     }
 
     fn load_words(path: &Path) -> Result<Vec<String>, Error> {

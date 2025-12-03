@@ -33,7 +33,7 @@ To do this, set the necessary environment variables in the operating system and 
 
 Example:
 - `APP__LOGGING__LOG_LEVEL=INFO`
-- `APP__TEST__AMOUNT_INCORRECT_ANSWE=3`
+- `APP__TEST__AMOUNT_INCORRECT_ANSWER=3`
 - `APP__VOCAB__WORDS_PATH=path/to/words.txt`
 - `APP__VOCAB__DICTIONARY_PATH=path/to/dictionary.txt`
 

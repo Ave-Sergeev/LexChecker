@@ -378,7 +378,6 @@ Those:Те
 Now:Сейчас
 Warm:Тёплый
 Lose:Терять
-Then:Тогда
 Only:Только
 Just:Только
 Same:Тот же

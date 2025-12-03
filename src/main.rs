@@ -35,11 +35,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     let words_path = Path::new(&settings.vocab.words_path);
     let dictionary_path = Path::new(&settings.vocab.dictionary_path);
 
-    let words_pool = WordsPool::new(words_path);
-    let dictionary = Dictionary::new(dictionary_path);
+    let words_pool = WordsPool::new(words_path)?;
+    let mut dictionary = Dictionary::new(dictionary_path)?;
 
-    let words = words_pool.get_words().unwrap();
-    let mut pairs = dictionary.get_pairs();
+    let words = words_pool.get_words();
+    let pairs = dictionary.get_pairs_mut();
 
     if pairs.is_empty() {
         return Err("Dictionary file is empty".into());
@@ -65,7 +65,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             .take(total_questions)
             .cloned()
             .collect::<Vec<_>>();
-        let correct_answers = run_quiz(&quiz_pairs, &words, &mut rng, amount_incorrect_answer);
+        let correct_answers = run_quiz(&quiz_pairs, words, &mut rng, amount_incorrect_answer);
 
         println!(
             "\nРезультат: {correct_answers}/{total_questions} слов (≈{}%)\n",
